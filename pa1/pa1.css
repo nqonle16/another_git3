@@ -1,0 +1,81 @@
+#tieude
+{   
+    display: inline-block;
+    font-size:20px;
+    background-color: yellow;
+}
+#kqua
+{
+	display:none;
+	text-align: center;
+    font-size: 40;
+    padding-top: 211px;
+}
+
+#xacnhan{
+    margin-bottom: 20px;
+    margin-left: 30%;
+    width: 40%;
+}
+
+#traloi{
+	margin: 5;
+    padding: 5;
+}
+
+
+#xemkq
+{
+    display: none;
+}
+#ketqua
+{
+    font-size: 22px;
+}
+#chao
+{
+    margin-top: 20px; 
+    font-size: 23px;
+    text-align: center;
+    border: 2px solid green;
+    border-radius: 20px;
+    padding: 25px;
+
+}
+.border-sm{
+    border: 1px solid green;
+    border-radius: 10px;
+    padding:5px;
+    text-align: center;
+}
+.dap
+{
+	font-family: arial;
+    font-size: 22;
+}
+.delrow{
+    background-color: transparent;
+    margin:  0px; 
+    padding: 0px;
+     box-shadow: none; 
+}
+#fdem{
+    text-align: center;
+    width: 120px;
+    height: 70px;
+    margin: auto;
+}
+#cauhoi{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}
+#nutxemkq{
+    margin-top: 23px;
+    height: 50px;
+    font-size: 14px;
+    margin-left: 42%;
+}

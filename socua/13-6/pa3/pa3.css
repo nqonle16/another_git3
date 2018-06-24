@@ -1,0 +1,69 @@
+
+#tieude
+{   
+    display: inline-block;
+    font-size:20px;
+    background-color: yellow;
+}
+
+#chao
+{
+    margin-top: 20px; 
+    font-size: 23px;
+    text-align: center;
+    border: 2px solid green;
+    border-radius: 20px;
+    padding: 25px;
+
+}
+.border-sm{
+    border: 2px solid green;
+    border-radius: 10px;
+    padding:5px;
+    text-align: center;
+}
+#fdem{
+    text-align: center;
+    width: 120px;
+    height: 70px;
+    margin: auto;
+}
+#cauhoi{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 24px;
+}
+
+.stb{
+	width: 70%;
+	margin-left: 15%;
+	border: 1px solid blue;
+}
+td{
+	width: 50%;
+}
+.stb td div, #boqua{
+	margin: 3px 0px;
+	border: 2px solid green;
+    border-radius: 10px;
+    padding:12px;
+    text-align: center;
+}
+.stb td div, #boqua:hover{
+	cursor: pointer;
+}
+#boqua{
+	margin-left:37%;
+	width: 25%;
+}
+#ketqua{
+	font-size: 22px;
+}
+#nutxemkq{
+    margin-top: 23px;
+    height: 50px;
+    font-size: 14px;
+}

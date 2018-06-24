@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Begin</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="font/awesome/css/fontawesome-all.min.css" rel="stylesheet"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <style type="text/css">
+  body,.container{
+        background-color: #d8d8d8;
+
+    }
+.container>.row{
+        background-color: papayawhip;
+        margin:0px 10px 10px;
+        padding: 10px;
+        box-shadow: 6px 6px 15px #777;
+    }
+    #border{
+    border: 2px solid green;
+    padding: 12px;
+    border-radius: 20px;
+    background-color: #7bf7a1;
+    }
+  *{
+    text-decoration: none;
+  }
+  #logo{
+    display: block;
+    width: 230px;
+    height: 66px;
+    opacity: 0.8;
+    background-image: url(icon/logo.png);
+    background-repeat: no-repeat;
+  }
+  #logo:hover{
+    opacity: 1;
+  }
+  li{display: inline}
+  a:hover{
+    text-decoration: none;
+  }
+  td{
+    padding: 0px 5px;
+  }
+  #pad0{
+    padding:55px 0px;
+  }
+  @keyframes doimau {
+    0%   {color: green;}
+    50%  {color: red;}
+    100% {color: blue;}
+}
+
+
+@media only screen and (max-width: 768px) {
+   #pad0 {
+        display: none;
+    }
+}
+.but{
+  width: 50%;
+  margin: auto;
+}
+label{
+  font-weight: normal;
+}
+#chuy{
+    padding: 8px 41px;
+    background-color: #b1f3b9;
+    border-left: 5px #FFEB3B solid;
+}
+#active{
+      background-color: white;
+}
+#test{
+  text-align: center;
+}
+#test:hover{
+      cursor: default;
+      color: #428bca;
+
+}
+#nav i {
+  margin-left: 20px;
+  font-size: 17px;
+
+}
+.sticky1 {
+  position: fixed;
+  margin-top: 0px;
+}
+    </style>
+  
+</head>
+<body>
+<div class="container" >
+    <div class="row" style=" background-color: none" id="header">
+  <div class="col-sm-3" style="text-align: center;"><a href="home.html" title="trang chủ" id='logo' class="col-sm-3"></a>
+</div>
+<div class="col-sm-6" style="text-align: center; margin-top :12px; "><p style="font-family: intro; font-size: 25px;letter-spacing: 6px; text-shadow: 3px 2px 7px black;"> FREE TEST ENGLISH ONLINE</p></div>
+<div class="col-sm-3">
+  <div class="navbar-right">
+       <a href="#" class="btn btn-info navbar-btn" data-toggle="modal" data-target="#signup"><span class = "glyphicon glyphicon-user"></span> Đăngký</a>
+        <a href="#" class="btn btn-warning navbar-btn" data-toggle="modal" data-target="#login"><span class = "glyphicon glyphicon-log-in"></span> Đăng nhập</a>
+    </div>
+</div>
+</div>
+
+<div id="log">
+<div id="signup" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-md">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h2 class="panel-title">Please sign up for Nqonle <small>It's free!</small></h2>
+      </div>
+            <div class="panel-body">
+                <div class="row">
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                      <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name">
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                      <input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                      <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                      <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+                    </div>
+                  </div>
+                </div>
+                
+                <input type="submit" value="Register" class="btn btn-info btn-block">
+              
+            </div>
+
+  </div>
+</div></div>
+
+<div id="login" class="modal fade" role="dialog" >
+  <div class="modal-dialog modal-md">
+    <!-- Modal content-->
+    <div class="modal-content" style="padding: 0px 20px 20px 20px;">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h2 class="panel-title">Please Log in for Nqonle </h2>
+      </div>
+            <div class="panel-body">
+                <div class="form-group">
+                  <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+                </div>
+                 <div class="form-group">
+                  <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+                    </div>
+                </div>               
+                <input type="submit" value="Log in" class="btn btn-info btn-block btn-md">
+              
+            </div>
+
+  </div>
+</div></div>
+<!-- header1-->
+<div class="row" style="padding-top: 0px" id="cnt">
+    <div class="col-sm-2"  id="pad0">
+        <nav class="navbar navbar-invert"><ul class="nav nav-stacked nav-pills " id="nav" style="background: lightgray;">
+            <li class="active"><a href="begin.html"><i class="fas fa-play"></i> Bắt đầu</a></li>
+            <li><a href="#" id="test"> Test 1</a></li>
+            <li><a href="#" id="test"> Test 2</a></li>
+            <li><a href="#" id="test"> Test 3</a></li>
+            <li><a href="xephang.html"><i class="fas fa-trophy"></i> Xếp hạng</a></li>
+            <li><a href="huongdan.html"><i class="far fa-question-circle"></i> Trợ giúp</a></li>
+         </ul></nav>
+    </div>
+    
+    <div class="col-sm-8" style="padding:0px">
+     <ul class="nav nav-tabs" style="background-color: #60f760;">
+            <li><a href="home.html"><i class="fas fa-home"></i></a></li>
+            <li class="active"><a id="active">1.Chuẩn bị</a></li>
+            <li><a>2.Làm bài</a></li>
+            <li><a>3.Kết quả</a></li>
+        </ul>
+<div class="form-horizontal"style="background-color: white; padding: 35px">
+<div id="border">
+  <div class="form-group">
+      <label class="control-label col-xs-4">Họ và tên:</label>
+       <div class="col-xs-5">
+          <input type="text" class="form-control" placeholder="Nhập tên..." id="ten" onblur="xulyten()">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-xs-4">Lớp:</label>
+      <div class="col-xs-5">
+          <input type="text" class="form-control" placeholder="Nhập lớp..." id="lop" onblur='xulylop();'>
+       </div>   
+    </div>
+    <div class="form-group">
+    <label class="control-label col-xs-4">Giới tính</label>
+    <div class="col-xs-5">
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name='gt' id="nam" value='Nam'>
+      <label class="form-check-label" for="nam"> Nam</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name='gt' id="nu" value='Nữ'>
+      <label class="form-check-label" for="nu"> Nữ</label>
+    </div>
+    </div>
+  </div>
+  <div class="form-group">
+      <label class="control-label col-xs-4">Phương án kiểm tra:</label>
+      <div class="col-xs-5">
+
+        <select id='phuongan' class="form-control" >
+          <option >--Vui lòng chọn phương án--</option>
+          <option value='pa1'>Phương án 1</option>
+          <option value='pa2'>Phương án 2</option>
+          <option value='pa3'>Phương án 3</option>
+        </select>
+    </div></div></div>
+
+<p id='thongbao' style='color:red; font-size:18; font-style:italic;visibility:hidden;'>Bạn phải hoàn thiện đầy đủ các nội dung!!!</p>
+
+<p id='chuy' class="border border-primary">
+Trong đó: <br>#Phương án 1:Trả lời từng câu hỏi một, mỗi câu có thời gian 20s, nếu đúng cộng 1 điểm, nếu sai thì dừng.<br>
+#Phương án 2: Trả lời một lần 15 câu hỏi trong 5 phút mỗi câu nếu đúng cộng 1 điểm, nếu sai không trừ điểm.<br>
+#Phương án 3: Trả lời câu hỏi liên tục trong 2 phút, mỗi câu nếu đúng cộng 1 điểm, sai trừ 1 điểm.</p>
+<a href='' id='link'class="but btn btn-success btn-lg btn-block" style="  width: 50%;margin: auto;" id='batdau'  onclick='return batdau();'>BẮT ĐẦU KIỂM TRA
+</a>
+</div>
+</div>
+<div class="col-sm-2">
+  
+</div>
+</div>
+<div class="row">
+
+    <footer>
+      <p>Tác giả: <A HREF="mailto:ngonle16@gmail.com">Lê Cảnh Ngôn</A></p>
+  <table>
+    <tr>
+      <td><i class="fa fa-map-marker"></i> Địa chỉ: Sơn Lộc - Sơn Tây - Hà Nội  </td>
+      <td><i class="fa fa-phone"> </i> Hotline: 0987 342 124  (8h:00 – 21h:00)</td>
+    </tr>
+    <tr>
+      <td><i class="fa fa-envelope"></i> Email:ngonle16@gmail.com </td>
+      <td><i class="fas fa-link fa"></i>Follow me: <a href="https://www.facebook.com/ngonle.pc"><i class="fab fa-facebook-square fa-2x" style="color: #3B588F;"></i></a>
+  <a href="https://plus.google.com/u/0/115258317464752454506"><i class="fab fa-google-plus-square fa-2x" style="color: #E13719;"></i></a>
+  <a href="https://www.instagram.com/ngonle_mad/"><i class="fab fa-instagram fa-2x" style="color: #BD3099"></i></a></td>
+    </tr>  </table>
+Copyright &copy; lớp vô tuyến điện tử- học viện PK-KQ năm 2018
+
+</footer>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script language='javascript'>
+function thietlap()
+{
+  localStorage.setItem('now', 0);
+  localStorage.setItem('now2', 0);
+  localStorage.setItem('now3', 0);
+}
+sbd=parseInt(localStorage.getItem('now'));
+if(isNaN(sbd)){thietlap();}
+
+var ten=document.getElementById("ten");
+var lop=document.getElementById("lop");
+var gtinh=document.getElementsByName('gt');
+var phuongan=document.getElementById("phuongan");
+var thongbao=document.getElementById('thongbao');
+var nutbatdau=document.getElementById('batdau');
+var thelink=document.getElementById('link');
+function thoaman()
+{
+  if(ten.value==""|lop.value==""|phuongan.value=="--Vui lòng chọn--"|gtinh.value==''|!(gtinh[0].checked|gtinh[1].checked))
+  {
+    return false;
+    }
+  else{
+    return true;
+  }
+}
+function sex()
+{
+  if(gtinh[0].checked)
+  {
+    return gtinh[0].value;
+  }
+  if(gtinh[1].checked)
+  {
+    return gtinh[1].value;
+  }
+}
+
+function xulylop()
+{
+  var string=lop.value;
+  lop.value= string[0].toUpperCase() + string.slice(1);
+}
+function xulyten()
+{
+  var chuoi=ten.value;
+  var str='';
+  str=str+chuoi[0].toUpperCase();
+  for(i=1;i<chuoi.length;i++)
+  {
+    if(chuoi[i]==' '&&chuoi[i+1]!=undefined&&chuoi[i+1]!=' ')
+    {
+      str=str+' ' +chuoi[i+1].toUpperCase();
+      i++;
+    }else
+    {
+      str=str+chuoi[i]
+    }
+    ten.value=str;
+  }
+}
+function thietlapbien1()
+{
+  sbd=parseInt(localStorage.getItem('now'));
+  localStorage.setItem('now', sbd+1);
+  sbd++;
+  var sten=[];
+  var slop=[];
+  var sgt=[];
+  sten[sbd]='ten'+sbd;
+  slop[sbd]='lop'+sbd;
+  sgt[sbd]='gt'+sbd;
+  localStorage.setItem(sten[sbd],ten.value);
+  localStorage.setItem(slop[sbd],lop.value);
+  localStorage.setItem(sgt[sbd],sex())  
+}
+function thietlapbien2()
+{
+  sbd=parseInt(localStorage.getItem('now2'));
+  localStorage.setItem('now2', sbd+1);
+  sbd++;
+  var sten=[];
+  var slop=[];
+  var sgt=[];
+  sten[sbd]='ten2'+sbd;
+  slop[sbd]='lop2'+sbd;
+  sgt[sbd]='gt2'+sbd;
+  localStorage.setItem(sten[sbd],ten.value);
+  localStorage.setItem(slop[sbd],lop.value);
+  localStorage.setItem(sgt[sbd],sex())  
+}
+function thietlapbien3()
+{
+  sbd=parseInt(localStorage.getItem('now3'));
+  localStorage.setItem('now3', sbd+1);
+  sbd++;
+  var sten=[];
+  var slop=[];
+  var sgt=[];
+  sten[sbd]='ten3'+sbd;
+  slop[sbd]='lop3'+sbd;
+  sgt[sbd]='gt3'+sbd;
+  localStorage.setItem(sten[sbd],ten.value);
+  localStorage.setItem(slop[sbd],lop.value);
+  localStorage.setItem(sgt[sbd],sex())  
+}
+function chonpa()
+{
+  if(phuongan.value=='pa1')
+  {
+    thelink.href='pa1/pa1.html';
+    thietlapbien1();
+  }
+    if(phuongan.value=='pa2')
+  {
+    thelink.href='pa2/pa2.html';
+    thietlapbien2();
+  }
+    if(phuongan.value=='pa3')
+  {
+    thelink.href='pa3/pa3.html';
+    thietlapbien3();
+  }
+}
+
+function batdau()
+{
+  if(thoaman())
+  {
+    chonpa();
+    return true;
+  }
+  else
+  {
+    thongbao.style.visibility='';
+    return false;
+  }
+}
+</script>
+
+
+ <script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("header");
+var sticky1 = 12;
+
+function myFunction() {
+  cont=document.getElementById("cnt");
+
+  navbar.style.width=cont.offsetWidth+'px';
+  if (window.pageYOffset >= sticky1) {
+    navbar.classList.add("sticky1")
+    cont.style.marginTop=navbar.offsetHeight+"px";
+    navbar.style.zIndex=1;
+  } else {
+    navbar.classList.remove("sticky1");
+ cont.style.marginTop="10px";
+
+  }
+}
+</script>
+</body>
+</html>

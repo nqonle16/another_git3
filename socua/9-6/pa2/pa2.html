@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Phương Án 2</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="../font/awesome/css/fontawesome-all.min.css" rel="stylesheet"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <style type="text/css">
+  body,.container{
+        background-color: #d8d8d8;
+
+    }
+    .border-sm{
+    border: 1px solid green;
+    border-radius: 10px;
+    padding:5px;
+    text-align: center;
+}
+    .row{
+        background-color: papayawhip;
+        margin:10px 0px;
+        padding: 10px;
+        box-shadow: 1px 1px 5px #333;
+    }
+  *{
+    text-decoration: none;
+  }
+  #logo{
+    display: block;
+    width: 230px;
+    height: 66px;
+    opacity: 0.8;
+    background-image: url(../icon/logo.png);
+    background-repeat: no-repeat;
+  }
+  #logo:hover{
+    opacity: 1;
+  }
+  li{display: inline}
+  a:hover{
+    text-decoration: none;
+  }
+  td{
+    padding: 0px 5px;
+  }
+  #pad0{
+    padding:55px 0px;
+  }
+  @keyframes doimau {
+    0%   {color: green;}
+    50%  {color: red;}
+    100% {color: blue;}
+}
+
+
+@media only screen and (max-width: 768px) {
+   #pad0 {
+        display: none;
+    }
+}
+.but{
+  width: 50%;
+  margin: auto;
+}
+label{
+  font-weight: normal;
+}
+#chuy{
+    padding: 8px 41px;
+    background-color: #b1f3b9;
+    border-left: 5px #FFEB3B solid;
+}
+#active{
+      background-color: #95c4f5;
+}
+#test{
+  text-align: center;
+}
+#li-act{
+    background-color: #5cf97f
+}
+#test:hover{
+      cursor: default;
+      color: #428bca;
+
+}
+#nav i {
+  margin-left: 20px;
+  font-size: 17px;
+
+}
+#li-act{
+    background-color: #5cf97f
+}
+
+
+#navbar{
+
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}
+    </style>
+      <link rel='stylesheet' href='pa2.css' type='text/css'>
+
+</head>
+<body>
+
+<div class="container" >
+    <div class="row" style=" background-color: none" id="header">
+  <div class="col-sm-3" style="text-align: center;"><a href="../home.html" title="trang chủ" id='logo' class="col-sm-3"></a>
+</div>
+<div class="col-sm-6" style="text-align: center; margin-top :12px; "><p style="font-family: intro; font-size: 25px;letter-spacing: 6px; text-shadow: 3px 2px 7px black;"> FREE TEST ENGLISH ONLINE</p></div>
+<div class="col-sm-3">
+  <div class="navbar-right">
+        <a href="#" class="btn btn-info navbar-btn"><span class = "glyphicon glyphicon-user"></span> Đăngký</a>
+        <a href="#" class="btn btn-warning navbar-btn"><span class = "glyphicon glyphicon-log-in"></span> Đăng nhập</a>
+    </div>
+</div>
+</div>
+<!-- header1-->
+<div class="row" style="padding-top: 0px">
+    <div class="col-sm-2"  id="pad0">
+        <nav class="navbar navbar-invert"><ul class="nav nav-stacked nav-pills " id="nav" style="background: lightgray;">
+            <li class="active"><a href="begin.html"><i class="fas fa-play"></i> Bắt đầu</a></li>
+            <li><a href="#" id="test"> Test 1</a></li>
+            <li id="li-act"><a href="#" id="test"> Test 2</a></li>
+            <li><a href="#" id="test"> Test 3</a></li>
+            <li><a href="#"><i class="fas fa-trophy"></i> Xếp hạng</a></li>
+            <li><a href="#"><i class="far fa-<b>question-cir</b>cle"></i> Trợ giúp</a></li>
+         </ul></nav>
+    </div>
+    
+    <div class="col-sm-8" style="padding:0px">
+     <ul class="nav nav-tabs" style="background-color: #60f760;">
+            <li><a href="../home.html"><i class="fas fa-home"></i></a></li>
+            <li><a>1.Chuẩn bị</a></li>
+            <li class="active"><a id="active">2.Làm bài</a></li>
+            <li><a>3.Kết quả</a></li>
+        </ul>  
+    <div style="background-color: #95c4f5;  padding: 10px 25px; min-height: 340px">
+
+<div id='chao'>
+  <p id='xinchao' ></p>
+  <input type='button' class="btn btn-success" id='nutbatdau' value='Bắt đầu làm bài' onclick='batdau()'>
+</div>
+
+
+<div id='bye'>
+  <p>Bạn đã hoàn thành và nộp xong bài thi<br>Bấm để xem kết quả của mình!</p>
+  <a href='end2.html' class="btn btn-info">Xem kết quả</a>
+</div>
+
+<div id='core' style='display:none'>
+<p id='tieude' class="border-sm"></p>
+<div class="border-sm" id="stick">
+Đếm ngược:
+<b id="m"></b> : <b id="s"></b>
+</div>
+<hr style="margin-top: 0px">
+
+<b>Question 1:
+</b><div class='cauhoi'></div>
+<div class='dapan'>
+Answer:
+  <input type='radio' name='c1' id="a1" class='chona'  value='a'><label class='hoia' style="margin-right:10px;" for="a1"></label>
+  <input type='radio' name='c1' id="b1" class='chonb'  value='b'><label class='hoib' style="margin-right:10px;" for="b1"></label>
+  <input type='radio' name='c1' id="c1" class='chonc'  value='c'><label class='hoic' style="margin-right:10px;" for="c1"></label>
+  <input type='radio' name='c1' id="d1" class='chond'  value='d'><label class='hoid' style="margin-right:10px;" for="d1"></label>
+  </div><hr>
+
+<b>Question 2:
+</b><div class='cauhoi'></div>
+<div class='dapan'>
+Answer:
+  <input type='radio' name='c2' id="a2" class='chona'  value='a'><label class='hoia' style="margin-right:10px;" for="a2"></label>
+  <input type='radio' name='c2' id="b2" class='chonb'  value='b'><label class='hoib' style="margin-right:10px;" for="b2"></label>
+  <input type='radio' name='c2' id="c2" class='chonc'  value='c'><label class='hoic' style="margin-right:10px;" for="c2"></label>
+  <input type='radio' name='c2' id="d2" class='chond'  value='d'><label class='hoid' style="margin-right:10px;" for="d2"></label>
+  </div><hr>
+
+<b>Question 3:
+</b><div class='cauhoi'></div>
+<div class='dapan'>
+Answer:
+  <input type='radio' name='c3' id="a3" class='chona'  value='a'><label class='hoia' style="margin-right:10px;" for="a3"></label>
+  <input type='radio' name='c3' id="b3" class='chonb'  value='b'><label class='hoib' style="margin-right:10px;" for="b3"></label>
+  <input type='radio' name='c3' id="c3" class='chonc'  value='c'><label class='hoic' style="margin-right:10px;" for="c3"></label>
+  <input type='radio' name='c3' id="d3" class='chond'  value='d'><label class='hoid' style="margin-right:10px;" for="d3"></label>
+  </div><hr>
+
+<b>Question 4:
+</b><div class='cauhoi'></div>
+<div class='dapan'>
+Answer:
+  <input type='radio' name='c4' id="a4" class='chona'  value='a'><label class='hoia' style="margin-right:10px;" for="a4"></label>
+  <input type='radio' name='c4' id="b4" class='chonb'  value='b'><label class='hoib' style="margin-right:10px;" for="b4"></label>
+  <input type='radio' name='c4' id="c4" class='chonc'  value='c'><label class='hoic' style="margin-right:10px;" for="c4"></label>
+  <input type='radio' name='c4' id="d4" class='chond'  value='d'><label class='hoid' style="margin-right:10px;" for="d4"></label>
+  </div><hr>
+
+<b>Question 5:
+</b><div class='cauhoi'></div>
+<div class='dapan'>
+Answer:
+  <input type='radio' name='c5' id="a5" class='chona'  value='a'><label class='hoia' style="margin-right:10px;" for="a5"></label>
+  <input type='radio' name='c5' id="b5" class='chonb'  value='b'><label class='hoib' style="margin-right:10px;" for="b5"></label>
+  <input type='radio' name='c5' id="c5" class='chonc'  value='c'><label class='hoic' style="margin-right:10px;" for="c5"></label>
+  <input type='radio' name='c5' id="d5" class='chond'  value='d'><label class='hoid' style="margin-right:10px;" for="d5"></label>
+  </div><hr>
+
+<b>Question 6:
+</b><div class='cauhoi'></div>
+<div class='dapan'>
+Answer:
+  <input type='radio' name='c6' id="a6" class='chona'  value='a'><label class='hoia' style="margin-right:10px;" for="a6"></label>
+  <input type='radio' name='c6' id="b6" class='chonb'  value='b'><label class='hoib' style="margin-right:10px;" for="b6"></label>
+  <input type='radio' name='c6' id="c6" class='chonc'  value='c'><label class='hoic' style="margin-right:10px;" for="c6"></label>
+  <input type='radio' name='c6' id="d6" class='chond'  value='d'><label class='hoid' style="margin-right:10px;" for="d6"></label>
+  </div><hr>
+
+<b>Question 7:
+</b><div class='cauhoi'></div>
+<div class='dapan'>
+Answer:
+  <input type='radio' name='c7' id="a7" class='chona'  value='a'><label class='hoia' style="margin-right:10px;" for="a7"></label>
+  <input type='radio' name='c7' id="b7" class='chonb'  value='b'><label class='hoib' style="margin-right:10px;" for="b7"></label>
+  <input type='radio' name='c7' id="c7" class='chonc'  value='c'><label class='hoic' style="margin-right:10px;" for="c7"></label>
+  <input type='radio' name='c7' id="d7" class='chond'  value='d'><label class='hoid' style="margin-right:10px;" for="d7"></label>
+  </div><hr>
+
+<b>Question 8:
+</b><div class='cauhoi'></div>
+<div class='dapan'>
+Answer:
+  <input type='radio' name='c8' id="a8" class='chona'  value='a'><label class='hoia' style="margin-right:10px;" for="a8"></label>
+  <input type='radio' name='c8' id="b8" class='chonb'  value='b'><label class='hoib' style="margin-right:10px;" for="b8"></label>
+  <input type='radio' name='c8' id="c8" class='chonc'  value='c'><label class='hoic' style="margin-right:10px;" for="c8"></label>
+  <input type='radio' name='c8' id="d8" class='chond'  value='d'><label class='hoid' style="margin-right:10px;" for="d8"></label>
+  </div><hr>
+
+<b>Question 9:
+</b><div class='cauhoi'></div>
+<div class='dapan'>
+Answer:
+  <input type='radio' name='c9' id="a9" class='chona'  value='a'><label class='hoia' style="margin-right:10px;" for="a9"></label>
+  <input type='radio' name='c9' id="b9" class='chonb'  value='b'><label class='hoib' style="margin-right:10px;" for="b9"></label>
+  <input type='radio' name='c9' id="c9" class='chonc'  value='c'><label class='hoic' style="margin-right:10px;" for="c9"></label>
+  <input type='radio' name='c9' id="d9" class='chond'  value='d'><label class='hoid' style="margin-right:10px;" for="d9"></label>
+  </div><hr>
+
+<b>Question 10:
+</b><div class='cauhoi'></div>
+<div class='dapan'>
+Answer:
+  <input type='radio' name='c10' id="a10" class='chona'  value='a'><label class='hoia' style="margin-right:10px;" for="a10"></label>
+  <input type='radio' name='c10' id="b10" class='chonb'  value='b'><label class='hoib' style="margin-right:10px;" for="b10"></label>
+  <input type='radio' name='c10' id="c10" class='chonc'  value='c'><label class='hoic' style="margin-right:10px;" for="c10"></label>
+  <input type='radio' name='c10' id="d10" class='chond'  value='d'><label class='hoid' style="margin-right:10px;" for="d10"></label>
+  </div><hr>
+
+<b>Question 11:
+</b><div class='cauhoi'></div>
+<div class='dapan'>
+Answer:
+  <input type='radio' name='c11' id="a11" class='chona'  value='a'><label class='hoia' style="margin-right:10px;" for="a11"></label>
+  <input type='radio' name='c11' id="b11" class='chonb'  value='b'><label class='hoib' style="margin-right:10px;" for="b11"></label>
+  <input type='radio' name='c11' id="c11" class='chonc'  value='c'><label class='hoic' style="margin-right:10px;" for="c11"></label>
+  <input type='radio' name='c11' id="d11" class='chond'  value='d'><label class='hoid' style="margin-right:10px;" for="d11"></label>
+  </div><hr>
+
+<b>Question 12:
+</b><div class='cauhoi'></div>
+<div class='dapan'>
+Answer:
+  <input type='radio' name='c12' id="a12" class='chona'  value='a'><label class='hoia' style="margin-right:10px;" for="a12"></label>
+  <input type='radio' name='c12' id="b12" class='chonb'  value='b'><label class='hoib' style="margin-right:10px;" for="b12"></label>
+  <input type='radio' name='c12' id="c12" class='chonc'  value='c'><label class='hoic' style="margin-right:10px;" for="c12"></label>
+  <input type='radio' name='c12' id="d12" class='chond'  value='d'><label class='hoid' style="margin-right:10px;" for="d12"></label>
+  </div><hr>
+
+<b>Question 13:
+</b><div class='cauhoi'></div>
+<div class='dapan'>
+Answer:
+  <input type='radio' name='c13' id="a13" class='chona'  value='a'><label class='hoia' style="margin-right:10px;" for="a13"></label>
+  <input type='radio' name='c13' id="b13" class='chonb'  value='b'><label class='hoib' style="margin-right:10px;" for="b13"></label>
+  <input type='radio' name='c13' id="c13" class='chonc'  value='c'><label class='hoic' style="margin-right:10px;" for="c13"></label>
+  <input type='radio' name='c13' id="d13" class='chond'  value='d'><label class='hoid' style="margin-right:10px;" for="d13"></label>
+  </div><hr>
+
+<b>Question 14:
+</b><div class='cauhoi'></div>
+<div class='dapan'>
+Answer:
+  <input type='radio' name='c14' id="a14" class='chona'  value='a'><label class='hoia' style="margin-right:10px;" for="a14"></label>
+  <input type='radio' name='c14' id="b14" class='chonb'  value='b'><label class='hoib' style="margin-right:10px;" for="b14"></label>
+  <input type='radio' name='c14' id="c14" class='chonc'  value='c'><label class='hoic' style="margin-right:10px;" for="c14"></label>
+  <input type='radio' name='c14' id="d14" class='chond'  value='d'><label class='hoid' style="margin-right:10px;" for="d14"></label>
+  </div><hr>
+
+<b>Question 15:
+</b><div class='cauhoi'></div>
+<div class='dapan'>
+Answer:
+  <input type='radio' name='c15' id="a15" class='chona'  value='a'><label class='hoia' style="margin-right:10px;" for="a15"></label>
+  <input type='radio' name='c15' id="b15" class='chonb'  value='b'><label class='hoib' style="margin-right:10px;" for="b15"></label>
+  <input type='radio' name='c15' id="c15" class='chonc'  value='c'><label class='hoic' style="margin-right:10px;" for="c15"></label>
+  <input type='radio' name='c15' id="d15" class='chond'  value='d'><label class='hoid' style="margin-right:10px;" for="d15"></label>
+  </div><hr>
+
+
+ 
+<input type=button class="btn btn-success" id='hoanthanh' onclick='return hoanthanh()' value='Hoàn Thành'>
+</div>
+
+
+  </div>  
+</div>
+</div>
+<div class="col-sm-2">
+  
+</div>
+
+<div class="row">
+
+    <footer>
+      <p>Tác giả: <A HREF="mailto:ngonle16@gmail.com">Lê Cảnh Ngôn</A></p>
+  <table>
+    <tr>
+      <td><i class="fa fa-map-marker"></i> Địa chỉ: Sơn Lộc - Sơn Tây - Hà Nội  </td>
+      <td><i class="fa fa-phone"> </i> Hotline: 0987 342 124  (8h:00 – 21h:00)</td>
+    </tr>
+    <tr>
+      <td><i class="fa fa-envelope"></i> Email:ngonle16@gmail.com </td>
+      <td><i class="fas fa-link fa"></i>Follow me: <a href="https://www.facebook.com/ngonle.pc"><i class="fab fa-facebook-square fa-2x" style="color: #3B588F;"></i></a>
+  <a href="https://plus.google.com/u/0/115258317464752454506"><i class="fab fa-google-plus-square fa-2x" style="color: #E13719;"></i></a>
+  <a href="https://www.instagram.com/ngonle_mad/"><i class="fab fa-instagram fa-2x" style="color: #BD3099"></i></a></td>
+    </tr>  </table>
+Copyright &copy; lớp vô tuyến điện tử- học viện PK-KQ năm 2018
+
+</footer>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<script language='javascript'>
+
+function check()
+{
+for(i=0;i<=14;i++)
+{
+chona[i].checked=true;
+}}
+
+
+var a="What was the matter with him? He ……. . a toothache<br/>A. to have          B. have           C.  has             D. had$ What subject is he ……… now? Vietnamese.<br/>A. to learn          B. learn           C. learning    D. learned$ ………… did she go yesterday morning? She went to the bookshop.<br/>A. What              B. Where        C. When         D. Why$ Are you free ……. . the evening? Yes, I am.<br/>A. in                    B. on               C. at                 D. to$ She is going to ……… television tonight.<br/>A. sing                B. play            C. stay             D. watch$ . . . . . . . . . . . . is that ? It’s my teacher .<br/>A. What              B. Who           C. Where        D. How$ <br/>$ This is Mai. …………. mother is a doctor.<br/>A. his                   B. she              C. her             D. his$ She …………. a banana .<br/>A. wants            B. want           C. to want       D. wantes$ What is it ? It is …………….<br/>A. eraser            B. an eraser  C. eraers         D. a eraser $ He is ………………. Vietnam<br/>A. from               B. on               C. in                D. at$ . . . . . . . . . . . . is that ? It’s my teacher .<br/>A. What              B. Who            C. Where       D. How$  Does she like sandwiches ? ………………….<br/>A. Yes, she do    B. Yes, she is  C. Yes, she does                   D. Yes, she like $ This is Mai. …………. mother is a doctor.<br/>A. his                   B. she              C. her             D. his$ She …………. a banana .<br/>A. wants            B. want           C. to want       D. wantes$ What is it ? It is …………….<br/>A. eraser            B. an eraser  C. eraers         D. a eraser $ He is ………………. Vietnam<br/>A. from               B. on               C. in                D. at$ It is not hot . . . . . . . . . . . . the winter.<br/>A. on                   B. in                C. at                 D. under$ I don’t like Maths ……………it is difficult.<br/>A. and                 B. but              C. so                D. because$ What’s the matter…………you?<br/>A. in                     B. with           C. on               D. of$ Do you like English? Yes,I……….<br/>A. do                   B. am               C. like             D. don’t$ He often………………to school in the morning<br/>A. gos                 B. going          C. goes           D. to go$ They are from . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .<br/>A. Singapore B. Vietnamese C. English D. American$ His birthday is . . . . . . . . . . . . . . . . . . . . . . . . June 1st.<br/>A. at                    B. on               C. in                D. about$ A . . . . . . . . . . . works in a hospital.<br/>A. Teacher         B. worker      C. Nurse          D. farmer$ I . . . . . . . . . . . . . . . . . . . . . . . . . . reading a book about Santa Claus.<br/>A. can                 B. do               C. am              D. are$ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . you like to play hide and seek with me?<br/>A. Would           B. Could         C. Do               D. If$ Did you . . . . . . . . teacher’s Day last month?<br/>A. celebrated                             B. celebrating                        C. celebrate                              D. celebrater$ Does he . . . . . . . . . . . . . . . . . . . . . . . . a sore-throat?<br/>A. has                 B. had             C. have           D. having$ We went to the cinema . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .<br/>A. today             B. yesterday  C. tomorrow   D. next Sunday$housewife often does . . . . . . . . <br/>A. homework                             B. Housework                       C. hardwork                              D. exercises$ It’s hot in Summer, . . . . . . . . . . . . . . . . . . . . . ?<br/>A. is it                 B. isn’t it        C. do it            D. does it$ …… your birthday? It’s in May.<br/>A. What’s           B. When’s     C. It’s              D. Where’s$ Would you like . . . . . milk? No, thanks<br/>A. an                   B. A                  C. some         D. one$ Can you swim, Mai?No, . . . . . .<br/>A. I can               B. I can’t        C. he can        D. he can’t$ What’s time is it? It’s seven- fifty- five. <br/>A. 7, 55              B. 7, 15           C. 7, 25           D. 7, 45$ What . . . . . does Peter study at school? - He has Maths, English, Art….<br/>A. objects          B. subjects     C. Food           D. drink$ Why do you like Music? Because I like …. . .<br/>A. to read           B. to draw       C. to write      D. to sing$ What’s the matter. . . . . . . . . . . . . . . . . . . . . . . . . you?<br/>A. for                  B. to                C. with            D. on$ I have. . . . . . . . . . . . . . . . . . . . . . cough.<br/>A. the                  B. a                  C. an                D.  any";
+var h=a.split("$");
+var y="c,c,b,a,d,b,c,c,a,b,c,b,c,c,a,b,b,b,d,b,a,c,a,b,c,c,a,a,a,b,b,b,b,c,b,a,b,d,c,b";
+var t=y.split(",");
+var sbd=parseInt(localStorage.getItem('now2'));
+var chay=document.getElementById('nutbatdau');
+var divhoi=document.getElementsByClassName('cauhoi');
+var hoia=document.getElementsByClassName('hoia');
+var hoib=document.getElementsByClassName('hoib');
+var hoic=document.getElementsByClassName('hoic');
+var hoid=document.getElementsByClassName('hoid');
+var pxinchao=document.getElementById('xinchao');
+var ptieude=document.getElementById('tieude');
+var link=document.getElementById('link');
+var choi=[];
+var dapa=[];
+var ctl=[];
+var sot=[];
+var chona=document.getElementsByClassName('chona');
+var chonb=document.getElementsByClassName('chonb');
+var chonc=document.getElementsByClassName('chonc');
+var chond=document.getElementsByClassName('chond');
+var m = 3; 
+var s = 0; 
+var sten='ten2'+sbd;
+var sdiem='diem2'+sbd;
+var sphut='phut2'+sbd;
+var sgiay='giay2'+sbd;
+function getrandom()
+{
+var x=100;
+while(x>=40){x=Math.random().toFixed(2)*100;x=x.toFixed(0);}
+return x;
+};
+
+for (i=0;i<=14;i++)
+{
+j=getrandom();
+
+choi[i]=h[j];
+dapa[i]=t[j];
+str=choi[i];
+ia=str.indexOf('A.')
+ib=str.indexOf('B.')
+ic=str.indexOf('C.')
+id=str.indexOf('D.')
+q=str.substring(0,ia);
+aa=str.substring(ia,ib);
+bb=str.substring(ib,ic);
+cc=str.substring(ic,id);
+dd=str.substring(id,str.length);
+
+
+divhoi[i].innerHTML=q;
+hoia[i].innerHTML=aa;
+hoib[i].innerHTML=bb;
+hoic[i].innerHTML=cc;
+hoid[i].innerHTML=dd;
+
+}
+
+function getctl()
+{
+for(i=0;i<=14;i++)
+  {
+  if(chona[i].checked){ctl[i]='a';}
+  if(chonb[i].checked){ctl[i]='b';}
+  if(chonc[i].checked){ctl[i]='c';}
+  if(chond[i].checked){ctl[i]='d';}
+  }
+}
+
+function getdiem()//edit lại hàm getdiem- lấy thời gian;
+{
+  diem=0;
+  for(i=0;i<=14;i++)
+  {
+  if(ctl[i]==dapa[i]){diem++;}
+  }
+  clearTimeout(timeout);
+min=document.getElementById('m').innerHTML;
+sec=document.getElementById('s').innerHTML;
+if(min==0&&sec==0)
+{
+  min=3;
+  sec=0;
+}
+else{
+  min=2-parseInt(min);
+  sec=60-parseInt(sec);
+}
+localStorage.setItem(sdiem,diem);
+localStorage.setItem(sphut,min);
+localStorage.setItem(sgiay,sec);
+document.getElementById('core').style.display='none';
+document.getElementById('bye').style.display='block';
+}
+
+function kiemtra()//edit lại hàm kiểm tra
+{dung=true;
+for(i=0;i<=14;i++)
+{if(ctl[i]==undefined)
+{
+  dung=false;
+  sot.push(i+1);
+}
+
+};
+if(!dung){alert('Bạn đã bỏ sót câu: '+sot)}
+return dung;
+}
+
+
+ten=localStorage.getItem(sten);
+pxinchao.innerHTML='Xin chào <strong> '+ten+'</strong> <br>Số báo danh của bạn là: <strong>'+hsbd(sbd)+'</strong><br> Hãy bắt đầu làm bài thi của mình!';
+function hsbd(x)
+{if(x<10)
+{return '00'+x;}
+else if(x<99)
+{return '0'+x}
+else{return x}}
+
+function start()
+{
+if (s === -1){
+m -= 1;
+s = 59;
+}
+if (m === -1){
+clearTimeout(timeout);//edit lại sự kiện hết giờ
+alert('Hết giờ');
+getctl();
+getdiem()
+return false;}
+document.getElementById('m').innerHTML = m.toString();
+document.getElementById('s').innerHTML = s.toString();
+timeout = setTimeout(function(){
+s--;
+start();}, 1000);}
+
+function batdau()
+{
+ptieude.innerHTML=ten+' - '+hsbd(sbd);
+document.getElementById('chao').style.display='none';
+document.getElementById('core').style.display='block';
+start();
+}
+function hoanthanh()                   
+{
+getctl();
+if(kiemtra())
+{
+xacnhan=confirm('Bạn đã chắc chắn?');
+if(xacnhan)
+{
+getdiem();
+}}}
+</script>
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("stick");
+var sticky = 232;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+
+
+</body>
+</html>

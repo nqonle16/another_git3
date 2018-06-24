@@ -1,0 +1,80 @@
+
+#cauhoi{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}
+#xemkq
+{
+	margin-left:178;
+	padding:5;
+}
+#nutxemkq
+{
+	background-color:red;
+	cursor:pointer;
+	padding:5;
+}
+
+#nutbatdau
+{
+	margin-left: 250;
+    padding: 5 10;
+    text-align: center;
+}
+#vung2
+{
+	background-color:red;
+}
+#chao
+{
+    font-size: 23px;
+    text-align: center;
+    border: 2px solid green;
+    border-radius: 20px;
+    padding: 25px;
+    margin-top: 20px;
+}
+#tieude
+{   
+    display: inline-block;
+    font-size:20px;
+    background-color: yellow;
+}
+#bye
+{
+	display: none;
+    font-size: 23px;
+    text-align: center;
+    border: 2px solid green;
+    border-radius: 20px;
+    padding: 25px;
+    margin-top: 15px;
+}
+
+#hoanthanh
+{
+height: 50px;
+margin-left: 40%;
+}
+.hoia,.hoib,.hoic,.hoid
+{
+	font-family: arial;
+    font-size: 18;
+    color: blue;
+}
+
+#stick{
+    font-size: 20px;
+    width: 190px;
+    display: inline-block;
+    margin-left: 25%;
+    background-color: #91e6ff;
+
+}
+hr{
+	margin: in
+}

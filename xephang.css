@@ -1,0 +1,26 @@
+#nutxh{
+  margin: 15px;
+}
+
+.thexh
+{
+  text-align: center;
+    
+}
+.stl{
+  width: 100%;
+  padding:10px;
+  border:1px solid black;
+  border-collapse:collapse;
+  }
+.stl td{
+  padding:10px;
+  border:1px solid black;
+  text-align: center;
+  }
+.stl th{
+  background-color: #6cfff1;
+  text-align: center;
+  padding:10px;
+  border:1px solid black;
+  }

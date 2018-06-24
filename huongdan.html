@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kết quả</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="font/awesome/css/fontawesome-all.min.css" rel="stylesheet"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+  body,.container{
+        background-color: #d8d8d8;
+
+    }
+    .container>.row{
+        background-color: papayawhip;
+        margin:0px 10px 10px;
+        padding: 10px;
+        box-shadow: 6px 6px 15px #777;
+    }
+  *{
+    text-decoration: none;
+  }
+  #logo{
+    display: block;
+    width: 230px;
+    height: 66px;
+    opacity: 0.8;
+    background-image: url(icon/logo.png);
+    background-repeat: no-repeat;
+  }
+  #logo:hover{
+    opacity: 1;
+  }
+  
+  #li-act{
+    background-color: #5cf97f
+}
+  li{display: inline}
+  a:hover{
+    text-decoration: none;
+  }
+  td{
+    padding: 0px 5px;
+  }
+  #pad0{
+    padding:55px 0px;
+  }
+  @keyframes doimau {
+    0%   {color: green;}
+    50%  {color: red;}
+    100% {color: blue;}
+}
+
+
+@media only screen and (max-width: 768px) {
+   #pad0 {
+        display: none;
+    }
+}
+
+label{
+  font-weight: normal;
+}
+#chuy{
+    padding: 8px 41px;
+    background-color: #b1f3b9;
+    border-left: 5px #FFEB3B solid;
+}
+#active{
+      background-color: white;
+}
+#test{
+  text-align: center;
+}
+#test:hover{
+      cursor: default;
+      color: #428bca;
+
+}
+#nav i {
+  margin-left: 20px;
+  font-size: 17px;
+
+}
+.sticky1 {
+  position: fixed;
+  margin-top: 0px;
+}
+    </style>
+<link rel='stylesheet' href='xephang.css' type='text/css'>
+</head>
+<body>
+<div class="container" >
+    <div class="row" style=" background-color: none" id="header">
+  <div class="col-sm-3" style="text-align: center;"><a href="home.html" title="trang chủ" id='logo' class="col-sm-3"></a>
+</div>
+<div class="col-sm-6 slogan"  style="text-align: center; margin-top :12px; "><p style="font-family: intro; font-size: 25px;letter-spacing: 6px; text-shadow: 3px 2px 7px black;"> FREE TEST ENGLISH ONLINE</p></div>
+<div class="col-sm-3">
+  <div class="navbar-right">
+       <a href="#" class="btn btn-info navbar-btn" data-toggle="modal" data-target="#signup"><span class = "glyphicon glyphicon-user"></span> Đăngký</a>
+        <a href="#" class="btn btn-warning navbar-btn" data-toggle="modal" data-target="#login"><span class = "glyphicon glyphicon-log-in"></span> Đăng nhập</a>
+    </div>
+</div>
+</div>
+
+<div id="log">
+<div id="signup" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-md">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h2 class="panel-title">Please sign up for Nqonle <small>It's free!</small></h2>
+      </div>
+            <div class="panel-body">
+                <div class="row">
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                      <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name">
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                      <input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                      <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                      <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+                    </div>
+                  </div>
+                </div>
+                
+                <input type="submit" value="Register" class="btn btn-info btn-block">
+              
+            </div>
+
+  </div>
+</div></div>
+
+<div id="login" class="modal fade" role="dialog" >
+  <div class="modal-dialog modal-md">
+    <!-- Modal content-->
+    <div class="modal-content" style="padding: 0px 20px 20px 20px;">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h2 class="panel-title">Please Log in for Nqonle </h2>
+      </div>
+            <div class="panel-body">
+                <div class="form-group">
+                  <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+                </div>
+                 <div class="form-group">
+                  <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+                    </div>
+                </div>               
+                <input type="submit" value="Log in" class="btn btn-info btn-block btn-md">
+              
+            </div>
+
+  </div>
+</div></div>
+<!-- header1-->
+<div class="row" style="padding-top: 0px" id="cnt">
+    <div class="col-sm-2"  id="pad0">
+        <nav class="navbar navbar-invert"><ul class="nav nav-stacked nav-pills " id="nav" style="background: lightgray;">
+            <li><a href="begin.html"><i class="fas fa-play"></i> Bắt đầu</a></li>
+            <li><a href="#" id="test"> Test 1</a></li>
+            <li><a href="#" id="test"> Test 2</a></li>
+            <li><a href="#" id="test"> Test 3</a></li>
+            <li><a href="xephang.html"><i class="fas fa-trophy"></i> Xếp hạng</a></li>
+            <li id="li-act"><a href="huongdan.html"><i class="far fa-question-circle"></i> Trợ giúp</a></li>
+         </ul></nav>
+    </div>
+    
+    <div class="col-sm-8" style="padding:0px">
+    
+<div style="text-indent: 50px">
+  <p>Vì không có gì để hướng dẫn nên tôi sẽ giới thiệu qua về quá trình xây dựng trang web cũng như phần nào tiến trình học trở thành front-end deverloper của mềnh</p>
+  <p>
+    Mới bắt đầu học lập trình web bằng javascript tầm tháng 8/2017, sai lộ trình quá nhưng vẫn học do chưa biết gì nên cứ học js rồi tính sau. do đã biết trước C rồi nên bước đầu có vẻ thuận lợi<br>
+    đến tháng 9/2017 nghĩ trong đầu dự định viết chương trình trả lời câu hỏi tiếng anh bằng js.
+    <br> đến tầm tháng 10 code ra được 1 phần ý tưởng với hơn 100 dòng. lúc này <b>chỉ biết javascrip</b> và dường như <b>không biết gì về html</b><br>
+    <b>30/10/2018</b><br>
+    <img style="width: 80%;margin: 20px;" src="image/pic1.jpg">
+    <p>Tiếp tục học thêm HTML và chút ít CSS đến tầm tháng 2/2018 thì code xong phần giao diện tương đối "nhớp" về chương trình cũ, cải tiến phần javascipt lên 3 phương án và nhiều thứ.</p><br>
+    <b>10/2/2018</b><br>
+    <img style="width: 80%;margin: 20px;" src="image/pic2.jpg">
+    <img style="width: 80%;margin: 20px;" src="image/pic3.jpg">
+    <p>học <b>hoàn thiện CSS</b>, và chút ít Bootstrap, tháng 6/2018 thiết kế lại giao diện chương trình, phần code javascrip giữ nguyên<br> kết quả:<br> có bootstrap -> responsive, nhìn có vẻ mềm mại là thực tế hơn,  mặc dù vẫn rất xoàn</p>
+    <br><b>16/6/2018</b><br>
+    <img style="width: 80%;margin: 20px;" src="image/pic4.jpg">
+    <img style="width: 80%;margin: 20px;" src="image/pic5.jpg">
+    <img style="width: 80%;margin: 20px;" src="image/pic6.jpg">
+hiện tại:<br>
+<b>
+  + Xong HTML<br>
+  + Xong CSS<br>
+  + Xong Bootstrap<br>
+  + Tương đối Javascript<br>
+  + Cơ bản Jquery 
+</b>
+
+  </p>
+</div>
+
+</div>
+<div class="col-sm-2">
+</div>
+</div>
+<div class="row">
+    <footer>
+      <p>Tác giả: <A HREF="mailto:ngonle16@gmail.com">Lê Cảnh Ngôn</A></p>
+  <table>
+    <tr>
+      <td><i class="fa fa-map-marker"></i> Địa chỉ: Sơn Lộc - Sơn Tây - Hà Nội  </td>
+      <td><i class="fa fa-phone"> </i> Hotline: 0987 342 124  (8h:00 – 21h:00)</td>
+    </tr>
+    <tr>
+      <td><i class="fa fa-envelope"></i> Email:ngonle16@gmail.com </td>
+      <td><i class="fas fa-link fa"></i>Follow me: <a href="https://www.facebook.com/ngonle.pc"><i class="fab fa-facebook-square fa-2x" style="color: #3B588F;"></i></a>
+  <a href="https://plus.google.com/u/0/115258317464752454506"><i class="fab fa-google-plus-square fa-2x" style="color: #E13719;"></i></a>
+  <a href="https://www.instagram.com/ngonle_mad/"><i class="fab fa-instagram fa-2x" style="color: #BD3099"></i></a></td>
+    </tr>  </table>
+Copyright &copy; lớp vô tuyến điện tử- học viện PK-KQ năm 2018
+</footer>
+</div>
+</div>
+
+</body></html>

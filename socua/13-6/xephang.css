@@ -1,0 +1,35 @@
+#nutxh{
+  margin: 15px;
+}
+#diem
+{
+    margin-top: 90px;
+    text-align: center;
+
+}
+#thexh
+{
+  text-align: center;
+    
+}
+
+#nutve1{
+  width: 120px;
+}
+.stl{
+  width: 100%;
+  padding:10px;
+  border:1px solid black;
+  border-collapse:collapse;
+  }
+.stl td{
+  padding:10px;
+  border:1px solid black;
+  text-align: center;
+  }
+.stl th{
+  background-color: #6cfff1;
+  text-align: center;
+  padding:10px;
+  border:1px solid black;
+  }
